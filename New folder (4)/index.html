@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Divine Life with Aashish | Book Appointment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f7f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c6e49;
+}
+
+h2, .price {
+    text-align: center;
+}
+
+.price {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.steps {
+    margin-top: 20px;
+}
+
+.qr {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.qr img {
+    width: 200px;
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 25px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2c6e49;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #245c3d;
+}
+
+.whatsapp {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 12px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Book Your Appointment</h1>
+    <h2>Divine Life with Aashish</h2>
+    <div class="price">Online Vastu Consultancy – ₹11,000/-</div>
+
+    <div class="steps">
+        <p><strong>Booking Steps:</strong></p>
+        <p>1️⃣ Scan QR Code & Complete Payment</p>
+        <p>2️⃣ Fill Appointment Form</p>
+        <p>3️⃣ Upload Your Maps</p>
+    </div>
+
+    <div class="qr">
+        <p><strong>Scan QR Code to Pay</strong></p>
+        <img src="qr.png" alt="Payment QR Code">
+    </div>
+
+    <!-- Netlify Form Start -->
+    <form name="appointment" method="POST" data-netlify="true" enctype="multipart/form-data">
+        <input type="hidden" name="form-name" value="appointment">
+
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="property_address" placeholder="Property Address" required></textarea>
+
+        <label><strong>Upload Property Map:</strong></label>
+        <input type="file" name="map_file" required>
+
+        <button type="submit">Submit Appointment</button>
+    </form>
+    <!-- Netlify Form End -->
+
+    <a class="whatsapp" href="https://wa.me/91YOURNUMBER" target="_blank">
+        Contact on WhatsApp
+    </a>
+
+    <div class="footer">
+        After submission, we will contact you to confirm your appointment schedule.<br>
+        Wishing you positivity and divine blessings.
+    </div>
+
+</div>
+</body>
+</html>
